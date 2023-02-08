@@ -1,0 +1,58 @@
+
+<h1>List of all directors</h1>
+
+
+<table class="table" border = "1" >
+<tr>
+<th>ID</th>
+<th>Image</th>
+<th>Name</th>
+<th>Dob</th>
+<th></th>
+</tr>
+
+
+
+<% @list_of_directors.each do |a_thing| %>
+
+<tr>
+<th> <%= a_thing.id%> </th>
+<th> <img src="<%= a_thing.image%>"> </th>
+<th> <%= a_thing.name%> </th>
+<th> <%= a_thing.dob%> </th>
+<th> <a href="/directors/<%=a_thing.id%>" > Show Details </a> </th>
+</tr>
+
+<%end %>
+
+
+</table>
+
+
+
+
+
+<h2>Add a new director (Building this form is not required. It's an optional stretch goal; but, you have the tools if you want to give it a try.)</h2>
+
+<div>
+<label for="name">Name</label>
+<input id="name" type="text" name= "director_name" >
+</div>
+
+<div>
+<label for="dob">Dob</label>
+<input id="dob" type="text" name= "director_dob" >
+
+</div>
+
+<div>
+
+<label for="bio">Bio</label>
+<input id="bio" type="text" name= "director_bio" >
+
+</div>
+
+<div>
+<label for="img">Image </label>
+<input id="img" type="text" name= "director_img" >
+</div>
